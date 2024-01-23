@@ -68,4 +68,6 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 6.1.0'
+  gem 'webmock'
+  gem 'httparty', '~> 0.21.0'
 end
