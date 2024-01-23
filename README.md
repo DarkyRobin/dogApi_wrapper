@@ -1,13 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Dog Api by kinduff
 
 Things you may want to cover:
 
 * Ruby version
+    ruby-3.2.2
 
 * System dependencies
+    gem 'rspec-rails', '~> 6.1.0'
+    gem 'webmock'
+    gem 'httparty', '~> 0.21.0'
 
 * Configuration
 
