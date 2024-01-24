@@ -1,6 +1,6 @@
 # README
 
-This is a Dog Api by kinduff
+This [Dog Api by kinduff](https://dogapi.dog/docs/api-v2 "Dog Api")
 
 Things you may want to cover:
 
