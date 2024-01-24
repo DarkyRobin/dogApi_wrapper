@@ -6,7 +6,7 @@ class Client
 
   def self.list_all_breeds
     response = get("/breeds", format: :plain)
-    JSON.parse response
+    JSON.parse(response.body)
   rescue JSON::ParserError => e
     { error: "JSON parsing error: #{e.message}" }
   rescue StandardError => e
@@ -14,9 +14,25 @@ class Client
   end
 
   def self.get_breed_info(breed_id)
-    response = get("/breeds/#{breed_id}")
-    response_body = response.body
-    puts "Response Body: #{response_body}"
+    response = get("/breeds/#{breed_id}", format: :plain)
+    JSON.parse(response.body)
+  rescue JSON::ParserError => e
+    { error: "JSON parsing error: #{e.message}" }
+  rescue StandardError => e
+    { error: "Error: #{e.message}" }
+  end
+
+  def self.get_breed_groups
+    response = get("/groups", format: :plain)
+    JSON.parse(response.body)
+  rescue JSON::ParserError => e
+    { error: "JSON parsing error: #{e.message}" }
+  rescue StandardError => e
+    { error: "Error: #{e.message}" }
+  end
+
+  def self.get_group_info(id)
+    response = get("/groups/#{id}", format: :plain)
     JSON.parse(response.body)
   rescue JSON::ParserError => e
     { error: "JSON parsing error: #{e.message}" }
