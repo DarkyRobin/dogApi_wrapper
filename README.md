@@ -25,9 +25,10 @@ The [Dog Api](https://dogapi.dog/) developed by kinduff, is a Ruby on Rails appl
 3. Start the API server by running `rails server` The API will be available at http://localhost:3000.
 
 ### API Endpoints
+Web Service: https://dogapi-wrapper.onrender.com/dogs
 1. List All Breeds
   ```
-  URL: /dogs
+  URL: /dogs/breeds
   Method: GET
   Success Response:
   Code: 200
